@@ -21,7 +21,7 @@ public:
     bool RemoveUser();
     bool UpdateUser();
 
-    DbManager(QString host, QString dbname, QString username, int port);
+    DbManager(QString host, QString dbname, QString username, QString password, int port);
     ~DbManager();
 };
 

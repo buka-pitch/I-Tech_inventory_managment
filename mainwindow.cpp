@@ -2,13 +2,12 @@
 #include <QVBoxLayout>
 #include "./ui_mainwindow.h"
 #include "dbmanager.hpp"
-#include "qboxlayout.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    DbManager AppDb();
+    DbManager AppDb("localhost", "todos", "syco", "sycoloop", 3306);
     ui->setupUi(this);
 }
 
