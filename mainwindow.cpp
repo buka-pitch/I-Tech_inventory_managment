@@ -2,6 +2,7 @@
 #include <QVBoxLayout>
 #include "./ui_mainwindow.h"
 #include "dbmanager.hpp"
+#include "qapplication.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -57,4 +58,9 @@ void MainWindow::on_settingBtn_clicked()
 {
   ui->contentArea->setCurrentIndex(2);
   //  ui->contentArea->setCurrentWidget("setting");
+}
+
+void MainWindow::on_actionclose_triggered()
+{
+  QApplication::quit();
 }
