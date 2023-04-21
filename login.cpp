@@ -30,6 +30,7 @@ bool Login::usernameExists()
 
     else {
         ui->usernameErrMsg_2->setHidden(false);
+        ui->usernameField->setFocus();
         return false;
     }
 }
@@ -40,6 +41,7 @@ bool Login::passwordExists()
         return true;
     } else {
         ui->passwordErrMsg->setHidden(false);
+        ui->passwordField->setFocus();
         return false;
     }
 }
@@ -59,4 +61,16 @@ void Login::on_LoginBtn_clicked()
 void Login::on_actionclose_triggered()
 {
     QApplication::quit();
+}
+
+bool Login::evaluateCredentials()
+{
+    //query the user here from the user db - not implemented yet ^
+//something like this
+#include "dbmanager.hpp"
+    DbManager Db("localhost", "todos", "syco2", "sycoloop", 3306);
+    QSqlDatabase db = Db.DbConnect();
+    db.exec(""
+            "SELECT * FROM todos"
+            "");
 }

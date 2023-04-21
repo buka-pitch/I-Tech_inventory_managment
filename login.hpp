@@ -14,6 +14,7 @@ class Login : public QMainWindow
 public:
     bool usernameExists();
     bool passwordExists();
+    bool evaluateCredentials();
     explicit Login(QWidget *parent = nullptr);
     ~Login();
 
