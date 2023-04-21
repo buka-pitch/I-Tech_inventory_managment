@@ -15,8 +15,9 @@ class MainWindow : public QMainWindow {
 public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
+  void sideBarInteracter();
 
-private slots:
+  private slots:
   void on_menuButton_clicked();
 
   void on_InventoryBtn_clicked();

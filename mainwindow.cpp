@@ -27,21 +27,8 @@ void MainWindow::on_menuButton_clicked() {
   }
 }
 
-/*void MainWindow::on_commandLinkButton_12_clicked()
-{
-  QWidget *widg = new Inventory(this);
-  try {
-    DB::DBManager manager;
-    manager.AddToInventory();
-
-  } catch (...) {
-  }
-  auto *layout = qobject_cast<QVBoxLayout *>(ui->maincard->layout());
-  layout->addWidget(widg);
-
-  widg->show();
-}*/
-
+// changing screen of the nested widget by
+// changin the index
 void MainWindow::on_InventoryBtn_clicked()
 {
   ui->contentArea->setCurrentIndex(1);
@@ -62,5 +49,11 @@ void MainWindow::on_settingBtn_clicked()
 
 void MainWindow::on_actionclose_triggered()
 {
+  // action created for quiting application from the toolbar
   QApplication::quit();
+}
+
+void SideBarInteracter()
+{
+  //sidebar
 }
