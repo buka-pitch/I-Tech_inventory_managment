@@ -456,8 +456,24 @@ border-radius:20px;
    </layout>
   </widget>
   <widget class="QToolBar" name="toolBar">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>true</bool>
+   </property>
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(26, 95, 180);
+color:white;</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -469,7 +485,8 @@ border-radius:20px;
   </widget>
   <action name="actionclose">
    <property name="icon">
-    <iconset theme="window-close"/>
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/icon/feather/x.svg</normaloff>:/icons/icon/feather/x.svg</iconset>
    </property>
    <property name="text">
     <string>close</string>
@@ -485,6 +502,8 @@ border-radius:20px;
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
