@@ -1,13 +1,13 @@
 #include "login.hpp"
+#include "dbmanager.hpp"
 #include "mainwindow.hpp"
 #include "qaction.h"
 #include "qapplication.h"
-#include "qnamespace.h"
 #include "ui_login.h"
 
-Login::Login(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::Login)
+Login::Login(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::Login)
 {
     ui->setupUi(this);
     ui->passwordField->setEchoMode(QLineEdit::Password);
@@ -66,11 +66,11 @@ void Login::on_actionclose_triggered()
 bool Login::evaluateCredentials()
 {
     //query the user here from the user db - not implemented yet ^
-//something like this
-#include "dbmanager.hpp"
-    DbManager Db("localhost", "todos", "syco2", "sycoloop", 3306);
-    QSqlDatabase db = Db.DbConnect();
-    db.exec(""
-            "SELECT * FROM todos"
-            "");
+    //something like this
+    //    DbManager Db("localhost", "todos", "syco2", "sycoloop", 3306);
+    //    QSqlQuery qry;
+    //    qry.exec("SELECT") QSqlDatabase db = Db.DbConnect();
+    // db.exec(""
+    //  "SELECT * FROM todos"
+    // "");
 }

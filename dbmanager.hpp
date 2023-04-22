@@ -16,7 +16,8 @@ private:
     QSqlDatabase DB = QSqlDatabase::addDatabase("QMYSQL");
 
 public:
-    QSqlDatabase DbConnect();
+    QSqlDatabase DbConnect(QString dbname);
+    bool createNewDatabase(QString dbname);
     bool AddUser();
     bool RemoveUser();
     bool UpdateUser();

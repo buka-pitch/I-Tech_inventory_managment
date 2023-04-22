@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    DbManager AppDb("localhost", "todos", "syco", "sycoloop", 3306);
+    DbManager AppDb("192.168.1.11", "todos", "syco2", "sycoloop", 3306);
     ui->setupUi(this);
 }
 
