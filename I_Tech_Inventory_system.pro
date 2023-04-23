@@ -12,6 +12,7 @@ CONFIG += c++20
 
 SOURCES += \
     dbmanager.cpp \
+    encrypter.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     dbmanager.hpp \
+    encrypter.hpp \
     login.hpp \
     mainwindow.hpp
 
