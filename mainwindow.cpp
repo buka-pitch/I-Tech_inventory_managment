@@ -2,13 +2,14 @@
 #include <QVBoxLayout>
 #include "./ui_mainwindow.h"
 #include "dbmanager.hpp"
+#include "login.hpp"
 #include "qapplication.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    DbManager AppDb("192.168.1.11", "todos", "syco2", "sycoloop", 3306);
+    DbManager AppDb("localhost", "users", "syco", "sycoloop", 3306);
     ui->setupUi(this);
 }
 
@@ -18,11 +19,13 @@ void MainWindow::on_menuButton_clicked() {
   QIcon ico;
   if (ui->menuButton->isChecked()) {
     ui->sideBar->setMaximumWidth(30);
-    ico = QIcon(":/icons/menu.png");
+    ico = QIcon(":/icons/icon/feather/menu.svg");
     ui->menuButton->setIcon(ico);
+    auto icon2 = ui->menuButton;
+    icon2->setWindowOpacity(0.5);
   } else {
     ui->sideBar->setMaximumWidth(200);
-    ico = QIcon(":/icons/back.png");
+    ico = QIcon(":/icons/icon/feather/arrow-left.svg");
     ui->menuButton->setIcon(ico);
   }
 }
@@ -56,4 +59,16 @@ void MainWindow::on_actionclose_triggered()
 void SideBarInteracter()
 {
   //sidebar
+}
+
+void MainWindow::lockApp()
+{
+  Login *login_widget = new Login();
+  login_widget->show();
+  this->hide();
+}
+
+void MainWindow::on_actionlock_triggered()
+{
+  lockApp();
 }

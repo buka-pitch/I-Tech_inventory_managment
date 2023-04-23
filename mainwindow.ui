@@ -243,20 +243,20 @@ border-radius:25px;</string>
                 <item>
                  <widget class="QPushButton" name="menuButton">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="minimumSize">
                    <size>
-                    <width>30</width>
+                    <width>100</width>
                     <height>30</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>50</width>
+                    <width>100</width>
                     <height>50</height>
                    </size>
                   </property>
@@ -286,7 +286,7 @@ border-radius:25px;</string>
                   </property>
                   <property name="icon">
                    <iconset resource="resource.qrc">
-                    <normaloff>:/icons/menu.png</normaloff>:/icons/menu.png</iconset>
+                    <normaloff>:/icons/icon/feather/menu.svg</normaloff>:/icons/icon/feather/menu.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -443,7 +443,7 @@ border-radius:25px;</string>
              <bool>true</bool>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="dashboard">
              <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -613,7 +613,7 @@ border-radius:25px;</string>
               <item alignment="Qt::AlignTop">
                <widget class="QTabWidget" name="tabWidget">
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="UserPreference">
                  <attribute name="title">
@@ -793,7 +793,8 @@ border-radius:25px;</string>
   </widget>
   <action name="actionclose">
    <property name="icon">
-    <iconset theme="window-close"/>
+    <iconset theme="window-close">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>close</string>
@@ -813,7 +814,8 @@ border-radius:25px;</string>
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="system-lock-screen"/>
+    <iconset theme="system-lock-screen">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>lock</string>

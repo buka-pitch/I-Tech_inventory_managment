@@ -1,9 +1,11 @@
 #include "login.hpp"
 #include "dbmanager.hpp"
 #include "mainwindow.hpp"
-#include "qaction.h"
 #include "qapplication.h"
+#include "qsqldatabase.h"
+#include "qsqlquery.h"
 #include "ui_login.h"
+#define SQL(...) #__VA_ARGS__
 
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
@@ -14,6 +16,8 @@ Login::Login(QWidget *parent)
     ui->copyrightText->setAlignment(Qt::AlignHCenter);
     ui->passwordErrMsg->setHidden(true);
     ui->usernameErrMsg_2->setHidden(true);
+    DbManager AppDb("localhost", "users", "syco", "sycoloop", 3306);
+
     this->show();
 }
 Login::~Login()
@@ -37,7 +41,7 @@ bool Login::usernameExists()
 bool Login::passwordExists()
 {
     if (!ui->passwordField->text().isEmpty()) {
-        QString password = ui->passwordField->text();
+        password = ui->passwordField->text();
         return true;
     } else {
         ui->passwordErrMsg->setHidden(false);
@@ -51,10 +55,18 @@ void Login::on_LoginBtn_clicked()
     ui->usernameErrMsg_2->setHidden(true);
 
     if (Login::usernameExists() && Login::passwordExists()) {
-        MainWindow *w = new MainWindow();
-        w->show();
-        w->showMaximized();
-        this->hide();
+        bool eval = Login::evaluateCredentials(username, password);
+        if (eval) {
+            MainWindow *w = new MainWindow();
+            w->show();
+            w->showMaximized();
+            this->hide();
+        } else {
+            ui->usernameField->setText("");
+            ui->passwordField->setText("");
+            ui->usernameErrMsg_2->setText("username or password error!! ");
+            ui->usernameErrMsg_2->setHidden(false);
+        }
     }
 }
 
@@ -63,14 +75,30 @@ void Login::on_actionclose_triggered()
     QApplication::quit();
 }
 
-bool Login::evaluateCredentials()
+bool Login::evaluateCredentials(QString username, QString password)
 {
-    //query the user here from the user db - not implemented yet ^
-    //something like this
-    //    DbManager Db("localhost", "todos", "syco2", "sycoloop", 3306);
-    //    QSqlQuery qry;
-    //    qry.exec("SELECT") QSqlDatabase db = Db.DbConnect();
-    // db.exec(""
-    //  "SELECT * FROM todos"
-    // "");
+    QString sr
+        = QString(
+              "SELECT * FROM users.users WHERE user_name = %1%2%3 AND password = %4%5%6 LIMIT 1")
+              .arg("'")
+              .arg(username)
+              .arg("'")
+              .arg("'")
+              .arg(password)
+              .arg("'");
+    QSqlDatabase db = QSqlDatabase::database();
+    QSqlQuery qr(db);
+
+    qr.prepare(sr);
+    if (qr.exec()) {
+        while (qr.next()) {
+            if (qr.value(1) == username && qr.value(2).toString() == password)
+                return true;
+        }
+
+    } else {
+        std::cout << "this error : " << qr.lastError().text().toStdString() << std::endl;
+        return false;
+    }
+    return false;
 }

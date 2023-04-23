@@ -16,6 +16,7 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
   void sideBarInteracter();
+  void lockApp();
 
   private slots:
   void on_menuButton_clicked();
@@ -27,6 +28,8 @@ public:
   void on_settingBtn_clicked();
 
   void on_actionclose_triggered();
+
+  void on_actionlock_triggered();
 
   private:
   Ui::MainWindow *ui;
