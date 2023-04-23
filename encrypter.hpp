@@ -13,6 +13,7 @@ class Encrypter
 {
 public:
     std::string encrypt(std::string encrstr, int size);
+    std::string decript(std::ciphedrtext);
     Encrypter();
 };
 
