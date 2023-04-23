@@ -21,7 +21,7 @@ public:
 private slots:
     void on_LoginBtn_clicked();
 
-    void on_actionclose_triggered();
+    void on_closeBtn_clicked();
 
 private:
     Ui::Login *ui;

@@ -16,6 +16,10 @@ Login::Login(QWidget *parent)
     ui->copyrightText->setAlignment(Qt::AlignHCenter);
     ui->passwordErrMsg->setHidden(true);
     ui->usernameErrMsg_2->setHidden(true);
+    this->setWindowTitle("I Tech Stock Managmet System");
+    this->setWindowFlags(Qt::FramelessWindowHint);
+    this->setAttribute(Qt::WA_TranslucentBackground);
+    this->setAttribute(Qt::WA_NoSystemBackground);
     DbManager AppDb("localhost", "users", "syco", "sycoloop", 3306);
 
     this->show();
@@ -70,11 +74,6 @@ void Login::on_LoginBtn_clicked()
     }
 }
 
-void Login::on_actionclose_triggered()
-{
-    QApplication::quit();
-}
-
 bool Login::evaluateCredentials(QString username, QString password)
 {
     QString sr
@@ -101,4 +100,9 @@ bool Login::evaluateCredentials(QString username, QString password)
         return false;
     }
     return false;
+}
+
+void Login::on_closeBtn_clicked()
+{
+    QApplication::quit();
 }

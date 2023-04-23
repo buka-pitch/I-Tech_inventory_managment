@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Login</class>
  <widget class="QMainWindow" name="Login">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -64,7 +67,11 @@ background-color:red;
 font-size:19px;
 }
 
-
+#closeBtn{
+background-color:red;
+}#closeBtn:hover{
+background-color:rgb(224, 27, 36);
+}
 QPushButton#LoginBtn::hover{
 	font: 700 10pt &quot;Liberation Serif&quot;;
 color:white;
@@ -82,6 +89,11 @@ paddin:2px;
 border-radius:10px;
 background-color:yellow;
 font-size:19px;
+}
+
+#imgSide{
+border-image: url(:/icons/bg.gif);
+border-radius:20px;
 }</string>
   </property>
   <property name="windowFilePath">
@@ -93,6 +105,12 @@ font-size:19px;
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>true</bool>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <property name="spacing">
@@ -447,46 +465,105 @@ border-radius:14px;
     <item>
      <widget class="QWidget" name="imgSide" native="true">
       <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/icons/bg.gif);
-border-radius:20px;
-</string>
+       <string notr="true"/>
       </property>
+      <widget class="QToolButton" name="closeBtn">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>30</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="tabletTracking">
+        <bool>true</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icon/feather/x.svg</normaloff>:/icons/icon/feather/x.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QToolBar" name="toolBar">
-   <property name="mouseTracking">
-    <bool>true</bool>
-   </property>
-   <property name="tabletTracking">
-    <bool>true</bool>
-   </property>
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(26, 95, 180);
-color:white;</string>
-   </property>
-   <property name="toolButtonStyle">
-    <enum>Qt::ToolButtonIconOnly</enum>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-   <addaction name="actionclose"/>
-  </widget>
   <action name="actionclose">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="resource.qrc">
      <normaloff>:/icons/icon/feather/x.svg</normaloff>:/icons/icon/feather/x.svg</iconset>
