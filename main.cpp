@@ -1,8 +1,6 @@
 #include <QApplication>
 #include <QtCore>
 #include "login.hpp"
-#include "mainwindow.hpp"
-#include "qnamespace.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +10,6 @@ int main(int argc, char *argv[])
     w.setWindowFlags(Qt::FramelessWindowHint);
     w.setAttribute(Qt::WA_TranslucentBackground);
     w.setAttribute(Qt::WA_NoSystemBackground);
-    //w.setWindowFlag(Qt::FramelessWindowHint);
     w.show();
 
     return a.exec();
