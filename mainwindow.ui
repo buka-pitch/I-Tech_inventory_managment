@@ -38,7 +38,10 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">#Container{
+   <string notr="true">QCommandLinkButton:hover{
+	background-color:rgb(26, 95, 180);
+}
+#Container{
 background-color:rgb(222, 221, 218)
 
 }#contentArea{
@@ -52,9 +55,9 @@ color:white;
 }
 
 #sideBar{
-	background-color:rgb(53, 132, 228);
+	background-color:rgb(36, 31, 49);
 	color:white;
-	border-radius:20px;
+	border-radius:0px;
 	
 
 }
@@ -221,7 +224,7 @@ background-color: rgb(246, 245, 244)
                 <bool>true</bool>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color:white;
+                <string notr="true">background-color:rgb(222, 221, 218);
 border-radius:25px;</string>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -290,8 +293,8 @@ border-radius:25px;</string>
                   </property>
                   <property name="iconSize">
                    <size>
-                    <width>50</width>
-                    <height>50</height>
+                    <width>30</width>
+                    <height>30</height>
                    </size>
                   </property>
                   <property name="checkable">
@@ -442,6 +445,10 @@ border-radius:25px;</string>
             <property name="tabletTracking">
              <bool>true</bool>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:white;
+color:black;</string>
+            </property>
             <property name="currentIndex">
              <number>2</number>
             </property>
@@ -463,127 +470,378 @@ border-radius:25px;</string>
                <number>0</number>
               </property>
               <item>
-               <widget class="QWidget" name="section" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                 <item>
-                  <widget class="QWidget" name="widget_2" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_5">
-                    <item>
-                     <widget class="QWidget" name="widget_15" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_28">
-                       <item>
-                        <widget class="QFrame" name="card_14">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_5" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_6">
-                    <item>
-                     <widget class="QWidget" name="widget_16" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_29">
-                       <item>
-                        <widget class="QFrame" name="card_15">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_4" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_4">
-                    <item>
-                     <widget class="QWidget" name="widget_14" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_27">
-                       <item>
-                        <widget class="QFrame" name="card_13">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="section_2" native="true">
-                <layout class="QHBoxLayout" name="horizontalLayout_8">
-                 <item>
-                  <widget class="QWidget" name="contentContainer" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_9">
-                    <item>
-                     <widget class="QFrame" name="maincard">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_5">
-                       <item>
-                        <widget class="QCheckBox" name="checkBox">
-                         <property name="text">
-                          <string>CheckBox</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
+               <widget class="QScrollArea" name="scrollArea_2">
+                <property name="styleSheet">
+                 <string notr="true">background-color:rgb(246, 245, 244);
+color:black;</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>154</width>
+                   <height>463</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_19">
+                  <item>
+                   <widget class="QWidget" name="Mainsection" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <item>
+                      <widget class="QScrollArea" name="scrollArea_3">
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                       <property name="horizontalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                       <property name="widgetResizable">
+                        <bool>true</bool>
+                       </property>
+                       <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                        <property name="geometry">
+                         <rect>
+                          <x>0</x>
+                          <y>0</y>
+                          <width>722</width>
+                          <height>126</height>
+                         </rect>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_4">
+                         <item>
+                          <widget class="QWidget" name="widget_5" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_6">
+                            <item>
+                             <widget class="QWidget" name="widget_16" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_29">
+                               <item>
+                                <widget class="QFrame" name="card_15">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_10">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_11">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="MainCard" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_5">
+                            <item>
+                             <widget class="QWidget" name="widget_15" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_28">
+                               <item>
+                                <widget class="QFrame" name="card_14">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_12">
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_8">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_9">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="MainCard_3" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_15">
+                            <item>
+                             <widget class="QWidget" name="widget_19" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_32">
+                               <item>
+                                <widget class="QFrame" name="card_18">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_35">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_36">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="MainCard_8" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_22">
+                            <item>
+                             <widget class="QWidget" name="widget_25" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_38">
+                               <item>
+                                <widget class="QFrame" name="card_24">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_28">
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_47">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_48">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="MainCard_4" native="true">
+                           <layout class="QHBoxLayout" name="horizontalLayout_16">
+                            <item>
+                             <widget class="QWidget" name="widget_20" native="true">
+                              <layout class="QHBoxLayout" name="horizontalLayout_33">
+                               <item>
+                                <widget class="QFrame" name="card_19">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_23">
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_37">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="pushButton_38">
+                                    <property name="text">
+                                     <string>PushButton</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="maincard_3">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_20">
+                     <item>
+                      <widget class="QPushButton" name="pushButton_29">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_30">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_31">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="section_2" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_8">
+                     <item>
+                      <widget class="QWidget" name="contentContainer" native="true">
+                       <layout class="QHBoxLayout" name="horizontalLayout_9">
+                        <item>
+                         <widget class="QFrame" name="maincard">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_5">
+                           <item>
+                            <widget class="QPushButton" name="pushButton_5">
+                             <property name="text">
+                              <string>PushButton</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_4">
+                             <property name="text">
+                              <string>PushButton</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="pushButton_3">
+                             <property name="text">
+                              <string>PushButton</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="maincard_2">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_8">
+                     <item>
+                      <widget class="QPushButton" name="pushButton_6">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_7">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_12">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
                </widget>
               </item>
               <item>
                <widget class="QWidget" name="section_3" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_10">
-                 <item>
-                  <widget class="QWidget" name="widget_6" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_11">
-                    <item>
-                     <widget class="QFrame" name="card_5">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
                 </layout>
                </widget>
               </item>
@@ -591,21 +849,270 @@ border-radius:25px;</string>
             </widget>
             <widget class="QWidget" name="inventory">
              <layout class="QVBoxLayout" name="verticalLayout_6">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
+              <item>
+               <widget class="QWidget" name="MainCard_2" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QWidget" name="widget_17" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_30">
+                    <item>
+                     <widget class="QFrame" name="card_16">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_17">
+                       <item>
+                        <widget class="QPushButton" name="pushButton_25">
+                         <property name="text">
+                          <string>PushButton</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="pushButton_26">
+                         <property name="text">
+                          <string>PushButton</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="widget_18" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_31">
+                       <item>
+                        <widget class="QFrame" name="card_17">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_18">
+                          <item>
+                           <widget class="QPushButton" name="pushButton_27">
+                            <property name="text">
+                             <string>PushButton</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_28">
+                            <property name="text">
+                             <string>PushButton</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:white;
+color:black;</string>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>106</width>
+                   <height>665</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_16"/>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox"/>
+                  </item>
+                  <item>
+                   <widget class="QScrollBar" name="horizontalScrollBar">
+                    <property name="mouseTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="tabletTracking">
+                     <bool>true</bool>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="invertedAppearance">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateEdit" name="dateEdit"/>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_5">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_17">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_21">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_2">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_20">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_15">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_19">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_18">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_16">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_14">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_13">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_22">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_23">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_24">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
              </layout>
             </widget>
             <widget class="QWidget" name="settings">
@@ -613,7 +1120,7 @@ border-radius:25px;</string>
               <item alignment="Qt::AlignTop">
                <widget class="QTabWidget" name="tabWidget">
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="UserPreference">
                  <attribute name="title">
@@ -660,9 +1167,28 @@ border-radius:25px;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_9">
+                      <widget class="QLabel" name="database_url_label">
                        <property name="text">
                         <string>Database Url</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="database_url_value">
+                       <property name="inputMask">
+                        <string/>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="maxLength">
+                        <number>20</number>
+                       </property>
+                       <property name="cursorMoveStyle">
+                        <enum>Qt::VisualMoveStyle</enum>
+                       </property>
+                       <property name="clearButtonEnabled">
+                        <bool>true</bool>
                        </property>
                       </widget>
                      </item>
@@ -762,6 +1288,13 @@ border-radius:25px;</string>
                 </widget>
                </widget>
               </item>
+              <item>
+               <widget class="QPushButton" name="saveChangesBtn">
+                <property name="text">
+                 <string>save changes</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </widget>
@@ -778,8 +1311,12 @@ border-radius:25px;</string>
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(26, 95, 180)</string>
+    <string notr="true">border-color: rgb(36, 31, 49);
+background-color:rgb(36, 31, 49)</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -821,7 +1358,7 @@ border-radius:25px;</string>
     <string>lock</string>
    </property>
    <property name="toolTip">
-    <string>loxk the program</string>
+    <string>lock the program</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+L</string>

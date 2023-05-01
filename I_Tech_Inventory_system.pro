@@ -1,5 +1,4 @@
 QT       += core gui sql
-
 QTPLUGIN += QMYSQL
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -15,14 +14,16 @@ SOURCES += \
     encrypter.cpp \
     login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    setting_configration.cpp
 
 
 HEADERS += \
     dbmanager.hpp \
     encrypter.hpp \
     login.hpp \
-    mainwindow.hpp
+    mainwindow.hpp \
+    setting_configration.hpp
 
 FORMS += \
     login.ui \
@@ -33,6 +34,7 @@ RESOURCES += \
 
 INCLUDEPATH += \
     /usr/lib/qt/plugins/sqldrivers \
+    /usr/lib/qt/plugins/sqldrivers
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

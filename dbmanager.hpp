@@ -13,12 +13,12 @@ private:
     QString Username;
     QString Password;
     QString DatabaseName;
-    QSqlDatabase DB = QSqlDatabase::addDatabase("QMYSQL");
+    QSqlDatabase DB;
 
 public:
     QSqlDatabase DbConnect(QString dbname);
     bool createNewDatabase(QString dbname);
-    bool AddUser();
+    bool AddUser(QString unam, QString pass);
     bool RemoveUser();
     bool UpdateUser();
 

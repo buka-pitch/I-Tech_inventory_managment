@@ -1,5 +1,6 @@
 #include "dbmanager.hpp"
 #include <QMessageBox>
+#include "encrypter.hpp"
 #include "qsqldatabase.h"
 #include "qsqlquery.h"
 #include <iostream>
@@ -16,6 +17,7 @@ DbManager::DbManager(QString host, QString dbname, QString username, QString pas
     DbManager::Port = port;
     DbManager::Password = password;
 
+    DB = QSqlDatabase::addDatabase("QMYSQL");
     DB.setHostName(DbManager::Host);
     DB.setUserName(DbManager::Username);
     DB.setPassword(DbManager::Password);
@@ -23,7 +25,7 @@ DbManager::DbManager(QString host, QString dbname, QString username, QString pas
     DB.setPort(DbManager::Port);
     QSqlQuery qry(DB);
     if (DB.open()) {
-        for (auto i : initDB) {
+        for (auto &i : initDB) {
             bool querydb = qry.exec("CREATE DATABASE IF NOT EXISTS " + i);
             if (!querydb) {
                 std::cout << "database error " << DB.lastError().text().toStdString()
@@ -54,7 +56,7 @@ DbManager::DbManager(QString host, QString dbname, QString username, QString pas
     } else {
         std::cout << "error opening db\n";
     }
-    DbManager::AddUser();
+    DbManager::AddUser(username, password);
 }
 
 DbManager::~DbManager()
@@ -80,12 +82,13 @@ QSqlDatabase DbManager::DbConnect(QString dbname)
     }
 }
 
-bool DbManager::AddUser()
+bool DbManager::AddUser(QString uname, QString pass)
 {
+    //    Encrypter encrypter;
+    //    std::string password = encrypter.encrypt(pass);
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery qr(db);
-    qr.prepare(
-        SQL(INSERT INTO `users`.`users` (`user_name`, `password`) VALUES('buka2', 'sycoloop');));
+    qr.prepare(SQL(INSERT INTO `users`.`users` (`user_name`, `password`) VALUES(uname, pass);));
     if (qr.exec()) {
         std::cout << "user added\n";
     } else {

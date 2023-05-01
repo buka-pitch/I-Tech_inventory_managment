@@ -1,82 +1,76 @@
-#include "encrypter.hpp"
+//#include "encrypter.hpp"
 
-Encrypter::Encrypter() {}
+//Encrypter::Encrypter()
+//{
+//    using namespace CryptoPP;
+//    HexEncoder encoder(new FileSink(std::cout));
+//}
 
-std::string Encrypter::encrypt(std::string encrstr, int size)
-{
-    using namespace CryptoPP;
+//std::string Encrypter::encrypt(std::string encrstr)
+//{
+//    using namespace CryptoPP;
 
-    AutoSeededRandomPool prng;
-    HexEncoder encoder(new FileSink(std::cout));
+//    AutoSeededRandomPool prng;
 
-    SecByteBlock key(AES::DEFAULT_KEYLENGTH);
-    SecByteBlock iv(AES::BLOCKSIZE);
+//    prng.GenerateBlock(key, key.size());
+//    prng.GenerateBlock(iv, iv.size());
 
-    prng.GenerateBlock(key, key.size());
-    prng.GenerateBlock(iv, iv.size());
+//    std::string plain = encrstr;
+//    std::string cipher, recovered;
 
-    std::string plain = encrstr;
-    std::string cipher, recovered;
+//    std::cout << "plain text: " << plain << std::endl;
 
-    std::cout << "plain text: " << plain << std::endl;
+//    try {
+//        CBC_Mode<AES>::Encryption e;
+//        e.SetKeyWithIV(key, key.size(), iv);
 
-    /*********************************\
-    \*********************************/
+//        StringSource s(plain,
+//                       true,
+//                       new StreamTransformationFilter(e,
+//                                                      new StringSink(
+//                                                          cipher)) // StreamTransformationFilter
+//        );                                                         // StringSource
+//    } catch (const Exception &e) {
+//        std::cerr << e.what() << std::endl;
+//        exit(1);
+//    }
 
-    try {
-        CBC_Mode<AES>::Encryption e;
-        e.SetKeyWithIV(key, key.size(), iv);
+//    std::cout << "key: ";
+//    encoder.Put(key, key.size());
+//    encoder.MessageEnd();
+//    std::cout << std::endl;
 
-        StringSource s(plain,
-                       true,
-                       new StreamTransformationFilter(e,
-                                                      new StringSink(
-                                                          cipher)) // StreamTransformationFilter
-        );                                                         // StringSource
-    } catch (const Exception &e) {
-        std::cerr << e.what() << std::endl;
-        exit(1);
-    }
+//    std::cout << "iv: ";
+//    encoder.Put(iv, iv.size());
+//    encoder.MessageEnd();
+//    std::cout << std::endl;
 
-    /*********************************\
-    \*********************************/
+//    std::cout << "cipher text: ";
+//    encoder.Put((const byte *) &cipher[0], cipher.size());
+//    encoder.MessageEnd();
+//    std::cout << std::endl;
 
-    std::cout << "key: ";
-    encoder.Put(key, key.size());
-    encoder.MessageEnd();
-    std::cout << std::endl;
+//    return cipher;
+//}
 
-    std::cout << "iv: ";
-    encoder.Put(iv, iv.size());
-    encoder.MessageEnd();
-    std::cout << std::endl;
+//std::string Encrypter::decript(std::string ciphedrtext)
+//{
+//    using namespace CryptoPP;
 
-    std::cout << "cipher text: ";
-    encoder.Put((const byte *) &cipher[0], cipher.size());
-    encoder.MessageEnd();
-    std::cout << std::endl;
+//    try {
+//        CBC_Mode<AES>::Decryption d;
+//        d.SetKeyWithIV(key, key.size(), iv);
 
-    /*********************************\
-    \*********************************/
-    return cipher;
-}
+//        StringSource s(cipher,
+//                       true,
+//                       new StreamTransformationFilter(d,
+//                                                      new StringSink(
+//                                                          recovered)) // StreamTransformationFilter
+//        );                                                            // StringSource
 
-std::string decript(std::ciphedrtext)
-{
-    try {
-        CBC_Mode<AES>::Decryption d;
-        d.SetKeyWithIV(key, key.size(), iv);
-
-        StringSource s(cipher,
-                       true,
-                       new StreamTransformationFilter(d,
-                                                      new StringSink(
-                                                          recovered)) // StreamTransformationFilter
-        );                                                            // StringSource
-
-        std::cout << "recovered text: " << recovered << std::endl;
-        return recovered;
-    } catch (const Exception &e) {
-        std::cerr << e.what() << std::endl;
-    }
-}
+//        std::cout << "recovered text: " << recovered << std::endl;
+//        return recovered;
+//    } catch (const Exception &e) {
+//        std::cerr << e.what() << std::endl;
+//    }
+//}
