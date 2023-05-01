@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     QString host = settings->value("DB/url").toString();
     host.isEmpty() ? host = "localhost" : host;
     std::cout << host.toStdString().append("\n");
-    DbManager AppDb(host, "users", "syco2", "sycoloop", 3306);
+    DbManager AppDb(host, "users", "syco", "sycoloop", 3306);
     ui->setupUi(this);
     ui->menuButton->setChecked(false);
     QIcon ico = QIcon(":/icons/icon/feather/arrow-left.svg");

@@ -939,7 +939,7 @@ color:black;</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>106</width>
+                   <width>112</width>
                    <height>665</height>
                   </rect>
                  </property>
@@ -1116,21 +1116,168 @@ color:black;</string>
              </layout>
             </widget>
             <widget class="QWidget" name="settings">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item alignment="Qt::AlignTop">
-               <widget class="QTabWidget" name="tabWidget">
+               <widget class="QTabWidget" name="UserTab">
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="tabletTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="tabPosition">
+                 <enum>QTabWidget::North</enum>
+                </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
+                </property>
+                <property name="elideMode">
+                 <enum>Qt::ElideLeft</enum>
+                </property>
+                <property name="documentMode">
+                 <bool>false</bool>
+                </property>
+                <property name="tabsClosable">
+                 <bool>false</bool>
+                </property>
+                <property name="tabBarAutoHide">
+                 <bool>true</bool>
                 </property>
                 <widget class="QWidget" name="UserPreference">
                  <attribute name="title">
-                  <string>Tab 1</string>
+                  <string>User Settings</string>
                  </attribute>
-                 <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+                 <attribute name="toolTip">
+                  <string>User settings</string>
+                 </attribute>
+                 <attribute name="whatsThis">
+                  <string>User settings</string>
+                 </attribute>
+                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                  <item>
+                   <widget class="QLabel" name="label_9">
+                    <property name="text">
+                     <string>User Settings</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QScrollArea" name="scrollArea_4">
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>654</width>
+                       <height>456</height>
+                      </rect>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_24">
+                      <item>
+                       <widget class="QWidget" name="widget_2" native="true">
+                        <layout class="QHBoxLayout" name="horizontalLayout_7">
+                         <item>
+                          <widget class="QLabel" name="label_10">
+                           <property name="text">
+                            <string>TextLabel</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_32">
+                           <property name="text">
+                            <string>PushButton</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QWidget" name="widget_4" native="true">
+                        <layout class="QHBoxLayout" name="horizontalLayout_18">
+                         <item>
+                          <widget class="QLabel" name="label_13">
+                           <property name="text">
+                            <string>TextLabel</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_34">
+                           <property name="text">
+                            <string>PushButton</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_12">
+                        <property name="text">
+                         <string>TextLabel</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QWidget" name="widget_6" native="true">
+                        <layout class="QHBoxLayout" name="horizontalLayout_19">
+                         <item>
+                          <widget class="QLabel" name="label_14">
+                           <property name="text">
+                            <string>TextLabel</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_39">
+                           <property name="text">
+                            <string>PushButton</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_3" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_17">
+                     <item>
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_33">
+                       <property name="text">
+                        <string>PushButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QWidget" name="DbSetting">
                  <attribute name="title">
-                  <string>Tab 2</string>
+                  <string>Database Settings</string>
                  </attribute>
                  <layout class="QHBoxLayout" name="horizontalLayout_12">
                   <item>
@@ -1212,7 +1359,7 @@ color:black;</string>
                 </widget>
                 <widget class="QWidget" name="tab">
                  <attribute name="title">
-                  <string>Page</string>
+                  <string>Preference</string>
                  </attribute>
                  <layout class="QHBoxLayout" name="horizontalLayout_13">
                   <item>
@@ -1248,7 +1395,7 @@ color:black;</string>
                 </widget>
                 <widget class="QWidget" name="tab_2">
                  <attribute name="title">
-                  <string>Page</string>
+                  <string>About ITech</string>
                  </attribute>
                  <layout class="QHBoxLayout" name="horizontalLayout_14">
                   <item>

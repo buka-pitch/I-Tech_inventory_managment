@@ -16,9 +16,14 @@ private:
     QSqlDatabase DB;
 
 public:
+    bool addProductsToInventory(QString product_name,
+                                QString product_description,
+                                QString product_category,
+                                unsigned int product_in_stock,
+                                unsigned int product_reorder_number);
     QSqlDatabase DbConnect(QString dbname);
     bool createNewDatabase(QString dbname);
-    bool AddUser(QString unam, QString pass);
+    bool AddUser(QString unam, QString pass, QString role);
     bool RemoveUser();
     bool UpdateUser();
 
